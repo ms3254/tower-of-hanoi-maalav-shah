@@ -48,12 +48,14 @@ public class TowerModel {
     {
         System.out.println("Move #" + ++moveCounter + " from " + source + " to " + destination);
         print();
-        if (towers[destination].peek() > towers[source].peek() || towers[destination].peek()==0){
+        if (towers[source].peek()==0){
+            System.out.println("There are no disks");
+        } else if (towers[destination].peek() > towers[source].peek() || towers[destination].peek()==0){
             towers[destination].push(towers[source].pop());
             //towers[source].pop();
             print();
         } else {
-            System.out.println("Couldn't move the disk");
+            System.out.println("Couldn't move the disk, move is invalid");
         }
     }
 
