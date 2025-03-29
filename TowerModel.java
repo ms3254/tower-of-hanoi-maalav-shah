@@ -47,10 +47,13 @@ public class TowerModel {
     public void move(int source, int destination)
     {
         System.out.println("Move #" + ++moveCounter + " from " + source + " to " + destination);
-        if (towers[destination].peek() > towers[source].peek()){
-            towers[destination].push(towers[source].peek());
-            towers[source].pop();
+        print();
+        if (towers[destination].peek() > towers[source].peek() || towers[destination].peek()==0){
+            towers[destination].push(towers[source].pop());
+            //towers[source].pop();
             print();
+        } else {
+            System.out.println("Couldn't move the disk");
         }
     }
 
