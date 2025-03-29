@@ -11,6 +11,7 @@ public class TowerSolver {
     {
         this.model = model;
         // Call the missing solve method (not this one)
+        solve();
     }
 
     // Create an overloaded solve(...) method
@@ -18,5 +19,8 @@ public class TowerSolver {
     //
     // [ solve method here]
     //
+    public void solve(){
+        
+    }
 
 }
